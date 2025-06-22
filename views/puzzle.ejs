@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daily Emoji Puzzle</title>
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Daily Emoji Puzzle</h1>
+    <p class="puzzle-emojis"><%= puzzle.emojis.join(' ') %></p>
+    <form method="post" action="/submit">
+      <input type="hidden" name="date" value="<%= date %>">
+      <input type="text" name="answer" placeholder="Your answer" required>
+      <button type="submit">Submit</button>
+    </form>
+    <p class="hint">Hint: <%= puzzle.hint %></p>
+  </body>
+</html>
